@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.example.cryptocurrencyapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.cryptocurrencyapp"
         minSdk = 27
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -79,4 +79,13 @@ dependencies {
     //Dagger - Hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+    //Dagger for compose
+    /*implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    kapt ("androidx.hilt:hilt-compiler:1.0.0")*/
+    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
+
+    // Compose dependencies
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0-alpha01")
+    implementation ("androidx.navigation:navigation-compose:2.7.1")
+    implementation ("com.google.accompanist:accompanist-flowlayout:0.18.0")
 }
